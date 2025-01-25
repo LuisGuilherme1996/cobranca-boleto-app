@@ -5,7 +5,7 @@ import { CardContentResponsiveComponent } from "../../../../shared/components/re
 import { CommonModule } from "@angular/common";
 
 @Component({
-    selector: 'clientes-component.ts',
+    selector: 'app-clientes-component',
     templateUrl: './clientesComponent.html',
     standalone: false
    
