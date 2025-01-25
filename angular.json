@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "src/output.css",
               "src/styles.css"
             ],
             "scripts": []
