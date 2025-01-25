@@ -5,7 +5,6 @@ export const navigationRoutes: Routes = [
     {
         path: '',
         component: NavigationComponent,
-        pathMatch: 'full',
         children: [
             {
                 path: 'home', 

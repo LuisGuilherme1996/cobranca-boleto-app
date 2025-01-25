@@ -126,61 +126,58 @@
 
  -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <div class="h-screen w-screen bg-slate-50">
-    <div class="bg-slate-950 lg:h-[960px] lg:w-[270px] sm: h-[640px] sm:w-[170px] rounded-tr-md rounded-br-md relative">
-        <aside class="bg-slate-950 h-full flex flex-col *:text-white fixed">
-            <div class="flex items-center gap-2 ml-2 mt-2 p-2 text-wrap overflow-hidden">
-                    <span class="pi pi-user"></span>
-                    <p>Olá, Luis Guilherme </p>
-            </div>
-            <span class="border border-gray-500 border-opacity-20"></span>
-            <div class="flex items-center gap-2 ml-2 mt-2 p-2 text-wrap overflow-hidden">
-                <div class="flex flex-col items-start justify-center gap-6">
-                            
-                    <ul class="flex flex-col font-bold gap-2 lg:w-[230px] *:text-sm *:cursor-pointer  *:py-2 *:px-4 *:rounded-md *:w-full *:hover:bg-slate-900">
-                        Clientes
-                        <li routerLink="/clientes" class="flex items-center gap-2 font-sans font-medium hover:bg-slate-900">
-                            <span class="pi pi pi-user"></span>
-                            Cliente
-                        </li>
-                    </ul>                        
-                    <ul class="flex flex-col font-bold gap-2 lg:w-[230px] *:text-sm *:cursor-pointer  *:py-2 *:px-4 *:rounded-md *:w-full">
-                        Finanças
-                        <li class="flex items-center gap-2 font-sans font-medium hover:bg-slate-900">
-                            <span class="pi pi-arrow-up"></span>
-                            Contas Receber
-                        </li>
-                        <li class="flex items-center gap-2 font-sans font-medium hover:bg-slate-900">
-                            <span class="pi pi-arrow-down"></span>
-                            Contas Pagar
-                        </li>
-                    </ul>                        
-                </div>
-            </div>
-            
-        </aside>
-    </div>
-    <div class="
-        lg:w-[1600px] lg:h-full lg:top-0 lg:left-[274px] lg:bg-white
-        sm:w-[785px]  sm:h-full sm:top-0 sm:left-[185px] sm:bg-slate-950 overflow-auto rounded-sm absolute">
-
-                <router-outlet/>
-            
-
-    </div>
+<div class="h-screen w-screen bg-slate-50">
+  <div
+    class="bg-slate-950 lg:h-[960px] lg:w-[270px] sm: h-[640px] sm:w-[170px] rounded-tr-md rounded-br-md relative"
+  >
+    <aside class="bg-slate-950 h-full flex flex-col *:text-white fixed">
+      <div
+        class="flex items-center gap-2 ml-2 mt-2 p-2 text-wrap overflow-hidden"
+      >
+        <span class="pi pi-user"></span>
+        <p>Olá, Luis Guilherme</p>
+      </div>
+      <span class="border border-gray-500 border-opacity-20"></span>
+      <div
+        class="flex items-center gap-2 ml-2 mt-2 p-2 text-wrap overflow-hidden"
+      >
+        <div class="flex flex-col items-start justify-center gap-6">
+          <ul
+            class="flex flex-col font-bold gap-2 lg:w-[230px] *:text-sm *:cursor-pointer *:py-2 *:px-4 *:rounded-md *:w-full *:hover:bg-slate-900"
+          >
+            Clientes
+            <li
+              routerLink="/home/clientes"
+              class="flex items-center gap-2 font-sans font-medium hover:bg-slate-900"
+            >
+              <span class="pi pi pi-user"></span>
+              Cliente
+            </li>
+          </ul>
+          <ul
+            class="flex flex-col font-bold gap-2 lg:w-[230px] *:text-sm *:cursor-pointer *:py-2 *:px-4 *:rounded-md *:w-full"
+          >
+            Finanças
+            <li
+              class="flex items-center gap-2 font-sans font-medium hover:bg-slate-900"
+            >
+              <span class="pi pi-arrow-up"></span>
+              Contas Receber
+            </li>
+            <li
+              class="flex items-center gap-2 font-sans font-medium hover:bg-slate-900"
+            >
+              <span class="pi pi-arrow-down"></span>
+              Contas Pagar
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <div
+    class="lg:w-[1600px] lg:h-full lg:top-0 lg:left-[274px] lg:bg-white sm:w-[785px] sm:h-full sm:top-0 sm:left-[185px] sm:bg-slate-950 overflow-auto rounded-sm absolute"
+  >
+    <router-outlet />
+  </div>
 </div>
