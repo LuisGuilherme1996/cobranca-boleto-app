@@ -1,0 +1,4 @@
+:host ::ng-deep .p-datatable {
+    background: white;
+    border-radius: 8px;
+}

@@ -1,0 +1,17 @@
+<p-toast />
+<p-table [value]="testes" selectionMode="single" [(selection)]="selectedProduct" dataKey="id" class="bg-red-400" >
+    <ng-template #header>
+        <tr>
+            <th>Nome</th>
+            <th>CNPJ/CPF</th>
+            <th>Status</th>
+        </tr>
+    </ng-template>
+    <ng-template #body let-product>
+        <tr [pSelectableRow]="product">
+            <td>{{product.nome}}</td>
+            <td>{{product.cnpj}}</td>
+            <td>{{product.status}}</td>
+        </tr>
+    </ng-template>
+</p-table>
