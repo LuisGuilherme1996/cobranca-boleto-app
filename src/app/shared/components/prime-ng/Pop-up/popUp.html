@@ -1,0 +1,4 @@
+<div class="flex flex-col items-center justify-end w-fit cursor-pointer">
+    <p-menu #menu [model]="items" [popup]="true" />
+    <p-button class="hover:rounded-[25%] hover:bg-slate-900 p-2" (click)="menu.toggle($event)" [icon]="primeIcons.USER"/>
+</div>
