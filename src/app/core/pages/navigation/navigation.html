@@ -2,7 +2,7 @@
     <div class="grid grid-cols-2 bg-slate-800">
         <div class="col-start-1">
             <p-drawer #drawerRef [(visible)]="visible" [showCloseIcon]="false">
-                <div class="flex flex-col h-full bg-slate-950  *:text-white rounded-sm border-2 border-red-500">
+                <div class="flex flex-col h-full bg-slate-950  *:text-white rounded-xs border-2 border-red-500">
                     <div class="flex items-center justify-between px-6 pt-4 shrink-0">
                         <span class="inline-flex items-center gap-2">
                             <span class="font-semibold text-2xl text-primary pi pi-user"></span>
@@ -10,7 +10,7 @@
 
                         </span>
                         <span>
-                            <p-button type="button" (click)="closeCallback($event)" icon="pi pi-times" rounded="true"
+                            <p-button type="button" (click)="closeCallback($event)" icon="pi pi-times" rounded-sm="true"
                                 outlined="true" styleClass="h-8 w-8"></p-button>
                         </span>
                     </div>
@@ -143,7 +143,7 @@
       >
         <div class="flex flex-col items-start justify-center gap-6">
           <ul
-            class="flex flex-col font-bold gap-2 lg:w-[230px] *:text-sm *:cursor-pointer *:py-2 *:px-4 *:rounded-md *:w-full *:hover:bg-slate-900"
+            class="flex flex-col font-bold gap-2 lg:w-[230px] *:text-sm *:cursor-pointer *:py-2 *:px-4 *:rounded-md *:w-full hover:*:bg-slate-900"
           >
             Clientes
             <li
@@ -176,7 +176,7 @@
     </aside>
   </div>
   <div
-    class="lg:w-[1600px] lg:h-full lg:top-0 lg:left-[274px] lg:bg-white sm:w-[785px] sm:h-full sm:top-0 sm:left-[185px] sm:bg-slate-950 overflow-auto rounded-sm absolute"
+    class="lg:w-[1600px] lg:h-full lg:top-0 lg:left-[274px] lg:bg-white sm:w-[785px] sm:h-full sm:top-0 sm:left-[185px] sm:bg-slate-950 overflow-auto rounded-xs absolute"
   >
     <router-outlet />
   </div>

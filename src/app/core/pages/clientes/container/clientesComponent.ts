@@ -1,7 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { ClientesFiltroComponent } from "../components/clientesFiltro/clientesFiltroComponent";
 import { SharedModule } from "primeng/api";
-import { CardContentResponsiveComponent } from "../../../../shared/components/responsive/responsiveCardContent/responsiveCardContent";
 import { CommonModule } from "@angular/common";
 
 @Component({

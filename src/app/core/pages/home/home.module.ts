@@ -18,7 +18,6 @@ import {
 import { SharedModule } from 'primeng/api';
 import { homeRouting } from './home.routing';
 import { ClientesModule } from '../clientes/clientes.module';
-import { CardContentResponsiveComponent } from '../../../shared/components/responsive/responsiveCardContent/responsiveCardContent';
 
 @NgModule({
   imports: [
@@ -34,7 +33,6 @@ import { CardContentResponsiveComponent } from '../../../shared/components/respo
     RouterOutlet,
     RouterLink,
     ClientesModule,
-    CardContentResponsiveComponent
   ],
   declarations: [HomeComponent],
   exports: [
