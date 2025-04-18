@@ -1,0 +1,8 @@
+@media screen and (min-width: 620px) and (max-width: 1080px) {
+    .conteudo-content {
+        padding: 4px;
+        width: 700px;
+        border-radius: 4px;
+        background-color: rgb(2 6 23 / var(--tw-bg-opacity, 1));
+    }
+  }

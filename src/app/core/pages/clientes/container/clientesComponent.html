@@ -1,4 +1,37 @@
-opa o Neymar Apertou o play
-<app-card-content-responsive>
-  <clientes-filtro-component></clientes-filtro-component>
-</app-card-content-responsive>
+<app-card-main-responsive>
+  <app-card-content-responsive-sm>
+    <clientes-filtro-component
+      [clienteFiltrosForm]="clienteFiltrosForm"
+      (onLimparFiltro)="limparFiltros()"
+      (onCadastrar)="abrirModal()"
+    ></clientes-filtro-component>
+  </app-card-content-responsive-sm>
+
+  <app-card-content-responsive-sm>
+    <!-- <app-card-table-responsive> -->
+      <app-clientes-listagem
+      (onEditar)="editarCliente($event)"
+      (onDeletar)="deletarCliente($event)"
+      >
+      </app-clientes-listagem>
+    <!-- </app-card-table-responsive> -->
+  </app-card-content-responsive-sm>
+</app-card-main-responsive>
+
+<!-- <primeNg-dialog
+>
+</primeNg-dialog> -->
+
+<app-modal-component #modalClienteCadastro
+[titulo]="( modoEditar$ | async ) ? 'Editar Cliente' : 'Cadastrar Cliente'"
+(onFechar)="fecharModal()"
+>
+
+@if (mostrarModal) {
+  <app-clientes-formulario
+  [mostrarModal]="mostrarModal"
+  [cliente]="cliente"
+  ></app-clientes-formulario>
+} 
+</app-modal-component>
+

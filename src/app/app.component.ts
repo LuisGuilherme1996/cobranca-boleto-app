@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-
+import { PrimeNG } from 'primeng/config';
 @Component({
   selector: 'app-root',
   imports: [
@@ -11,6 +11,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private primeng: PrimeNG) {}
   title = 'cobranca-boleto-app';
+  ngOnInit(): void {
+    this.primeng.ripple.set(true);
+  }
 }

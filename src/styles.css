@@ -1,1 +1,84 @@
 @import "primeicons/primeicons.css";
+@import "tailwindcss-primeui";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@custom-variant darkMode (&:where(.my-app-dark, .my-app-dark *)); 
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+
+  *{
+    
+    @apply font-['Roboto'] text-balance
+  }
+}
+
+@layer primeng {
+
+  
+
+  input.p-inputtext {
+    @apply border-gray-300 rounded-lg focus:ring-primary focus:border-primary;
+  }
+
+  p-table {
+    width: 100%;
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+  }
+
+  .p-dialog-header {
+    background: rgb(49, 50, 53);
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    margin-bottom: 10px;
+  }
+
+  .p-dialog-footer {
+    border: 1px solid rgb(49, 50, 53);
+    width: 100%;
+    background: rgb(49, 50, 53);
+  }
+
+  .p-dialog-close-button {
+    color: #fff !important;
+    font-weight: bold !important;
+  }
+  .p-dialog-close-button:hover {
+    background: none !important;
+
+  }
+  /* .p-button {
+    width: 40px !important;
+  } */
+  .p-button-icon{
+    color: #fff;
+  }
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+ @layer components {
+  .input-custom {
+    @apply w-full border border-gray-300 rounded-lg py-2 px-4 focus:outline-none focus:ring-2 focus:ring-primary;
+  }
+
+  .btn-custom {
+    @apply bg-secondary text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition-all;
+  }
+  .font-style-default {
+    @apply font-['Roboto'] text-base;
+  }
+
+  .custom-modal {
+    @apply bg-slate-950 rounded-xl shadow-2xl;
+  }
+} 

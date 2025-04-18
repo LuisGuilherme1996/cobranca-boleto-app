@@ -1,3 +1,112 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+
+@layer base {
+
+  @media (max-width: 768px) {
+    .card {
+      overflow-x: auto;
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    /* Ajuste de tamanho da fonte para telas pequenas */
+    th, td {
+      padding: 8px;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 480px) {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+  
+    thead {
+      display: none; /* Esconde os cabeçalhos */
+    }
+  
+    tr {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+  
+    td {
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td::before {
+      content: attr(data-label); /* Usa o atributo para criar "cabeçalhos" responsivos */
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+}
+
+@layer components {
+  .input-custom {
+    @apply px-4 py-2/*  border border-gray-500 */ text-black 
+    border
+    bg-slate-50 rounded-sm text-sm font-medium 
+    hover:bg-gray-100 hover:border-gray-200 
+    focus:outline-none focus:ring-2 focus:ring-gray-100 
+    
+}
+
+  .btn-custom {
+    @apply bg-secondary text-white font-bold py-2 px-4 rounded hover:bg-purple-700 transition-all;
+  }
+
+  .form-select {
+    @apply w-full border /* border-gray-500 */ bg-slate-50 text-black 
+      rounded-sm /* py-2 px-4 */ p-2 py-2 text-sm 
+      focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-gray-100
+      hover:border-gray-400 transition-all;
+  }
+
+  .card-content {
+    @apply bg-slate-50  w-full p-4 rounded-sm border border-gray-200 my-2 dark:bg-slate-900 dark:border-slate-900 sm:p-2 md:p-2 lg:p-10 xl:p-8 text-black font-bold py-2 px-4  transition-all;
+  }
+
+ /*  .card-main {
+    @apply bg-red-900 w-full p-4 border
+  } */
+
+  .label {
+    @apply text-nowrap overflow-hidden text-ellipsis whitespace-nowrap text-slate-800 font-serif;
+  }
+
+  @media screen and (min-width: 620px) and (max-width: 1080px) {
+    .conteudo-main {
+        background: beige;
+        width: 700px;
+        margin: 10px;
+        border-radius: 4px;
+        padding: 1px;
+    }
+}
+}
