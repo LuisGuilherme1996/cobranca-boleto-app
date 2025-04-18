@@ -12,6 +12,5 @@ import { SharedModule } from "../../../shared/shared.module";
 export class LoginComponent implements OnInit {
     constructor() {}
     ngOnInit(): void {
-        console.log('iniciou');
     }
 }

@@ -1,29 +1,33 @@
-<div class="flex justify-between items-center mb-4 *:text-white">
-    <h2 class="text-lg font-bold">Clientes</h2>
+<div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl text-gray-900">Clientes</h2>
     <div class="flex gap-2">
-      <button class="p-2 bg-green-700 text-white rounded-md hover:bg-green-800"><span class="pi pi-plus"></span></button>
-      <button class="p-2 bg-blue-600 rounded-md hover:bg-blue-700"><span class="pi pi-refresh"></span></button>
+      <p-button icon="pi pi-plus" severity="success" size="small" (click)="onCadastrar.emit()" />
+      <!-- <button class="p-2 bg-green-700 text-white rounded-md hover:bg-green-800" (click)="onCadastrar.emit()"><span class="pi pi-plus"></span></button> -->
+      <p-button icon="pi pi-refresh" severity="info"  size="small"/>
+      <!-- <button class="p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"><span class="pi pi-refresh"></span></button> -->
     </div>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
-    <div class="flex flex-col">
-      <label for="cnpj_cpf" class="block font-semibold mb-1 text-white">CNPJ/CPF</label>
-      <input type="text" class="form-input rounded-sm" id="cnpj_cpf" />
-    </div>
-    <div class="flex flex-col">
-      <label for="lastname" class="block font-semibold mb-1 text-white">Nome</label>
-      <input type="text" class="form-input rounded-sm" id="lastname" />
-    </div>
-    <div class="flex flex-col">
-      <label for="status" class="block font-semibold mb-1 text-black">Status</label>
-      <select class="form-select rounded-sm" bindValue="value" bindLabel="description">
+  <form [formGroup]="clienteFiltrosForm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+      <div class="flex flex-col">
+        <label for="cnpj_cpf" class="text-gray-600">CNPJ/CPF</label>
+        <input type="text" class="input-custom" id="cnpj_cpf" formControlName="cnpj_cpf"/>
+      </div>
+      <div class="flex flex-col">
+        <label for="lastname" class="text-gray-600">Nome</label>
+        <input type="text" class="input-custom" id="lastname" formControlName="nome"/>
+      </div>
+      <div class="flex flex-col">
+        <label for="status" class="text-gray-600">Status</label>
+        <select class="form-select" bindValue="value" bindLabel="description" formControlName="status">
           <option>Todos</option>
           <option>Ativo</option>
           <option>Inativo</option>
-      </select>
+        </select>
+      </div>
     </div>
-  </div>
+  </form>
   <div class="flex justify-end mt-4">
-    <button class="p-2 bg-orange-600 text-white rounded-md hover:bg-orange-700">Limpar Filtros</button>
+    <button class="px-4 py-2 rounded-sm bg-orange-600 text-white hover:bg-orange-700" (click)="onLimparFiltro.emit()">Limpar Filtros</button>
     <!-- <p-button label="Clique Aqui"></p-button> -->
   </div> 

@@ -4,6 +4,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 
 import { routes } from './app.routes';
+import { meThemes } from '../my-styles';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -12,7 +13,16 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-      }
+        preset: meThemes /* 'Aura',
+        options: {
+          cssLayer: {
+            name: 'primeng',
+            order: 'theme, base, primeng'
+          },
+          darkModeSelector: '.my-app-dark'
+        } */
+      },
+      inputStyle: 'outlined',
     })
   ]
 };

@@ -1,0 +1,32 @@
+    <p-dialog header={{titulo}} [modal]="true"  [(visible)]="visible" [styleClass]="modalWidthClass" (onHide)="onFechar.emit()">
+        <!-- <div class="w-[120px] bg-gray-400">
+            <p>teste</p>
+
+        </div> -->
+        <ng-content></ng-content>
+        <footer>
+            @if (btnSalvar && btnCancelar) {
+                <div class="w-full  mt-2 flex gap-4 p-3 justify-end">
+                        <p-button  [label]="btnCancelarNome" severity="danger" (onClick)="onFechar.emit()" >
+                            @if(carregando) {
+                                <i class="pi pi-spin pi-spinner"  style="font-size: 1rem"></i>
+                            } @else {
+                                <i class="pi pi-times"  style="font-size: 1rem"></i>
+                            }
+                        </p-button>
+                        <p-button  [label]="btnSalvarNome" severity="success">
+                            @if(carregando) {
+                                <i class="pi pi-spin pi-spinner"  style="font-size: 1rem"></i>
+                            } @else {
+                                <i class="pi pi-check"  style="font-size: 1rem"></i>
+                            }
+                        </p-button>
+                </div>
+               
+            } @else {
+                <div class="w-full  mt-2 flex gap-4 p-3 justify-end">
+                    <p-button [label]="btnCancelarNome" severity="danger" (onClick)="onFechar.emit()"/>
+                </div>
+            }
+        </footer>
+    </p-dialog>

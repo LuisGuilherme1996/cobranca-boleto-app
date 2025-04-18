@@ -18,6 +18,8 @@ import {
 import { SharedModule } from 'primeng/api';
 import { homeRouting } from './home.routing';
 import { ClientesModule } from '../clientes/clientes.module';
+import { DialogService } from 'primeng/dynamicdialog';
+import { ModalService } from '../../../../services/modal.service';
 
 @NgModule({
   imports: [
@@ -39,5 +41,6 @@ import { ClientesModule } from '../clientes/clientes.module';
     // HomeComponent,
     // RouterModule
   ],
+  providers: [ModalService, DialogService],
 })
 export class HomeModule {}

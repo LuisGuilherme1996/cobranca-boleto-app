@@ -4,6 +4,7 @@ import { Component } from "@angular/core";
 @Component({
     selector: 'app-card-main-responsive',
     templateUrl: './responsiveCardMain.html',
+    styleUrls: ['./responsiveCardMain.css'],
     standalone: true,
     imports: [CommonModule]
 })
